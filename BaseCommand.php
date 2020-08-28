@@ -33,4 +33,16 @@ abstract class BaseCommand extends \CodeIgniter\CLI\BaseCommand
         }
     }
 
+    public function preparePath(string $path) : string
+    {
+        if (DIRECTORY_SEPARATOR == "\\")
+        {
+            return str_replace("/", "\\", $path);
+        }
+        else
+        {
+            return str_replace("\\", "/", $path);
+        }
+    }
+
 }
