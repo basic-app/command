@@ -45,27 +45,27 @@ abstract class BaseCommand extends \CodeIgniter\CLI\BaseCommand
         }
     }
 
-    public function rootpath(string $path) : string
+    public function rootPath(string $path) : string
     {
         return ROOTPATH . $this->preparePath($path);
     }
 
-    public function apppath(string $path) : string
+    public function appPath(string $path) : string
     {
         return APPPATH . $this->preparePath($path);
     }
 
-    public function systempath(string $path) : string
+    public function systemPath(string $path) : string
     {
         return SYSTEMPATH . $this->preparePath($path);
     }
 
-    public function fcpath(string $path) : string
+    public function fcPath(string $path) : string
     {
         return FCPATH . $this->preparePath($path);
     }
 
-    public function writepath(string $path) : string
+    public function writePath(string $path) : string
     {
         return WRITEPATH . $this->preparePath($path);
     }
