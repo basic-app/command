@@ -33,41 +33,4 @@ abstract class BaseCommand extends \CodeIgniter\CLI\BaseCommand
         }
     }
 
-    public function preparePath(string $path) : string
-    {
-        if (DIRECTORY_SEPARATOR == "\\")
-        {
-            return str_replace("/", "\\", $path);
-        }
-        else
-        {
-            return str_replace("\\", "/", $path);
-        }
-    }
-
-    public function rootPath(string $path) : string
-    {
-        return ROOTPATH . $this->preparePath($path);
-    }
-
-    public function appPath(string $path) : string
-    {
-        return APPPATH . $this->preparePath($path);
-    }
-
-    public function systemPath(string $path) : string
-    {
-        return SYSTEMPATH . $this->preparePath($path);
-    }
-
-    public function fcPath(string $path) : string
-    {
-        return FCPATH . $this->preparePath($path);
-    }
-
-    public function writePath(string $path) : string
-    {
-        return WRITEPATH . $this->preparePath($path);
-    }
-
 }
