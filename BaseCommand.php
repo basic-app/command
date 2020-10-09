@@ -14,6 +14,8 @@ abstract class BaseCommand extends \CodeIgniter\CLI\BaseCommand
 
     protected $autoFlush = true;
 
+    protected $request;
+
     /**
      * Command constructor.
      *
@@ -31,6 +33,8 @@ abstract class BaseCommand extends \CodeIgniter\CLI\BaseCommand
                 ob_end_flush();
             }
         }
+
+        $this->request = service('cliRequest');
     }
 
 }
